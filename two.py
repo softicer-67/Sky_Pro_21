@@ -1,15 +1,17 @@
-class Int:
-    def __init__(self, value):
-        self.value = value
-
-    def __add__(self, other):
-        my_dict = {
+my_dict = {
             'один': 1,
             'два': 2,
             'три': 3,
             'четыре': 4,
             'пять': 5
         }
+
+
+class Int:
+    def __init__(self, value):
+        self.value = value
+
+    def __add__(self, other):
 
         if other in my_dict:
             return self.value + my_dict[other]
@@ -22,13 +24,6 @@ class Int:
 
 def decor(func):
     def wrapper(a, b):
-        my_dict = {
-            'один': 1,
-            'два': 2,
-            'три': 3,
-            'четыре': 4,
-            'пять': 5
-        }
         if b in my_dict:
             return func(a, my_dict[b])
         elif isinstance(b, str) and b not in str(my_dict):
