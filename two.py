@@ -12,7 +12,6 @@ class Int:
         self.value = value
 
     def __add__(self, other):
-
         if other in my_dict:
             return self.value + my_dict[other]
         elif isinstance(other, str) and other not in str(my_dict):
